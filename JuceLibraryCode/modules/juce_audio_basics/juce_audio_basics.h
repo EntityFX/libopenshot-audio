@@ -65,7 +65,7 @@
  #define JUCE_USE_SSE_INTRINSICS 1
 #endif
 
-#if ! JUCE_INTEL
+#if ! JUCE_INTEL && ! JUCE_E2K
  #undef JUCE_USE_SSE_INTRINSICS
 #endif
 

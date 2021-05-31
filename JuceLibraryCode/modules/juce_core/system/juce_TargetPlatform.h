@@ -167,7 +167,7 @@
     #define JUCE_BIG_ENDIAN 1
   #endif
 
-  #if defined (__LP64__) || defined (_LP64) || defined (__arm64__)
+  #if defined (__LP64__) || defined (_LP64) || defined (__arm64__) || defined(__e2k__)
     #define JUCE_64BIT 1
   #else
     #define JUCE_32BIT 1
@@ -175,6 +175,8 @@
 
   #if defined (__arm__) || defined (__arm64__) || defined (__aarch64__)
     #define JUCE_ARM 1
+  #elif defined (__e2k__)
+    #define JUCE_E2K 1
   #elif __MMX__ || __SSE__ || __amd64__
     #define JUCE_INTEL 1
   #endif
